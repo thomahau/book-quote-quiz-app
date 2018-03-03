@@ -1,0 +1,164 @@
+html {
+	background-image:
+		linear-gradient(
+			rgba(0, 0, 0, 0.7),
+			rgba(0, 0, 0, 0.7)
+		),
+		url("../images/library.jpg");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+body {
+	font-family: 'Marvel', sans-serif;
+	color: white;
+	text-align: center;
+	font-size: 1.75em;
+}
+
+header {
+	padding: 50px 0;
+}
+
+.count-container {
+	font-size: 0.85em;
+}
+
+em {
+	color: orange;
+}
+
+h1 {
+	font-size: 2em;
+	font-weight: bolder;
+	margin-bottom: 20px;
+}
+
+.welcome-text {
+	margin-bottom: 50px;
+}
+
+.btn {
+	margin: 20px auto 10px auto;
+	padding: 10px;
+	width: 120px;
+	background-color: #966B50;
+	color: white;
+	font-size: 0.6em;
+	border-radius: 4px;
+	cursor: pointer;
+	display: block;
+}
+
+/* Question pages */
+.book-title {
+	font-style: italic;
+}
+
+.answer-form {
+	margin-top: 70px;
+}
+
+.answer-form fieldset {
+	padding: 5px;
+	border: 1px solid orange;
+}
+
+.radio-container {
+	margin: 5px auto;
+	padding-left: 5px;
+	text-align: left;
+}
+
+.radio-container:hover {
+	cursor: pointer;
+	background-color: #966B50;
+}
+
+.radio-container label:hover {
+	cursor: pointer;
+}
+
+.highlight {
+	background-color: #966B50;
+}
+
+input[type="radio"] {
+	/* Push original radio outside viewport to allow custom styling while maintaining a11y */
+	/* https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms */
+	position: absolute;
+	left: -1000em;
+}
+
+.radio-container label::before {
+	content: " ";
+	display: inline-block;
+	position: relative;
+	top: -2px;
+	margin: 0 5px 0 0;
+	width: 10px;
+	height: 10px;
+	border-radius: 11px;
+	border: 1px solid white;
+	background-color: transparent;
+}
+
+input[type="radio"]:checked + label::before {
+	content: " ";
+	display: inline-block;
+	position: relative;
+	top: -2px;
+	margin: 0 5px 0 0;
+	width: 10px;
+	height: 10px;
+	border-radius: 11px;
+	background-color: orange;
+}
+
+/* Answer feedback pages */
+.citation {
+	margin: 5px auto 100px auto;
+}
+
+.icon {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+	border: 1px solid white;
+}
+
+.feedback {
+	text-align: left;
+	display: inline-block;
+}
+
+/* Final page */
+.final-image {
+	display: block;
+	border: 1px solid white;
+	width: 80%;
+	height: auto;
+	margin: 20px auto;
+}
+
+@media only screen and (min-width: 640px) {
+	.left {
+	margin-left: 16.66666666%;
+	}
+
+	.right {
+		margin-right: 16.66666666%;
+	}
+
+	.col-8 {
+		margin-left: 16.66666666%;
+		margin-right: 16.66666666%;
+	}
+
+	.final-image {
+		max-width: 400px;
+	}
+}
